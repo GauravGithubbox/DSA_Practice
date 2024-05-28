@@ -15,8 +15,6 @@ package gaurav;
 
 public class FindMaxConsecutiveOnes {
     public static void main(String[] args) {
-        // Create an instance of the Solution class
-
 
         // Define some test cases
         int[] testCase1 = {1, 1, 0, 1, 1, 1}; // Longest sequence of 1s is 3

@@ -27,7 +27,7 @@ package gaurav;
 
 public class CheckIfArrayIsSortedAndRotated {
     public static void main(String[] args) {
-        // Create an instance of the Solution class
+
 
         // Define some test cases
         int[] testCase1 = {3, 4, 5, 1, 2}; // Rotated sorted array
