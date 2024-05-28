@@ -1,5 +1,6 @@
 package sorting.recursive;
 
+//https://www.geeksforgeeks.org/problems/quick-sort/1
 public class QuickSort {
 
     // Swap function to exchange elements at indices i and j
