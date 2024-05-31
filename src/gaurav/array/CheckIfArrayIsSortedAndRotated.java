@@ -23,7 +23,7 @@ Input: nums = [1,2,3]
 Output: true
 Explanation: [1,2,3] is the original sorted array.
 You can rotate the array by x = 0 positions (i.e. no rotation) to make nums.*/
-package gaurav;
+package gaurav.array;
 
 public class CheckIfArrayIsSortedAndRotated {
     public static void main(String[] args) {

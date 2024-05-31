@@ -11,7 +11,7 @@ Example 2:
 
 Input: nums = [1,0,1,1,0,1]
 Output: 2*/
-package gaurav;
+package gaurav.array;
 
 public class FindMaxConsecutiveOnes {
     public static void main(String[] args) {
