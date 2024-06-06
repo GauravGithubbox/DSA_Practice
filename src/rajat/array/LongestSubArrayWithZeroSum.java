@@ -9,8 +9,7 @@ public class LongestSubArrayWithZeroSum {
         int sum = 0;
         int maxLen = 0;
         map.put(0, -1);
-        // -1 1 -1 1
-        // 3 - (-1) = 4
+
         for(int i = 0; i < n; i++) {
             sum += arr[i];
 
