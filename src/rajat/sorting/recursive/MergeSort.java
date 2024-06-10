@@ -1,72 +1,76 @@
-package sorting.recursive;
+package rajat.sorting.recursive;
 //https://www.geeksforgeeks.org/problems/merge-sort/1
 
 public class MergeSort {
+    /**
+     * Merges two sorted subarrays of arr[].
+     * First subarray is arr[start..mid]
+     * Second subarray is arr[mid+1..end]
+     *
+     * @param arr The main array containing the subarrays to be merged.
+     * @param start The starting index of the first subarray.
+     * @param mid The ending index of the first subarray.
+     * @param end The ending index of the second subarray.
+     */
     private static void merge(int[] arr, int start, int mid, int end) {
-        int left = 0, right = 0;
+        // Temporary array to store the merged result
+        int[] temp = new int[end - start + 1];
+        int i = start;    // Initial index of the first subarray
+        int j = mid + 1;  // Initial index of the second subarray
+        int k = 0;        // Initial index of the merged array
 
-        // Create Two Arrays
-        // [1, 2, 3, 4,5 6, 7]
-        int[] leftArray = new int[mid - start + 1];
-        int[] rightArray = new int[end - mid];
-
-        // Copy first Half
-        // 0 to mid
-        for (int i = 0; i < leftArray.length; i++) {
-            leftArray[i] = arr[start + i];
-        }
-
-        // Copy Second Half
-        for (int i = 0; i < rightArray.length; i++) {
-            rightArray[i] = arr[mid + 1 + i];
-        }
-
-
-        // Merge
-        int k = start;
-        while (left < leftArray.length && right < rightArray.length) {
-            if (leftArray[left] <= rightArray[right]) {
-                arr[k] = leftArray[left];
-                left++;
+        // Merge the two subarrays into the temporary array
+        while (i <= mid && j <= end) {
+            if (arr[i] <= arr[j]) {
+                temp[k++] = arr[i++];
             } else {
-                arr[k] = rightArray[right];
-                right++;
+                temp[k++] = arr[j++];
             }
-            k++;
         }
 
-        while (left < leftArray.length) {
-            arr[k] = leftArray[left];
-            k++;
-            left++;
+        // Copy any remaining elements of the first subarray
+        while (i <= mid) {
+            temp[k++] = arr[i++];
         }
 
-        while (right < rightArray.length) {
-            arr[k] = rightArray[right];
-            k++;
-            right++;
+        // Copy any remaining elements of the second subarray
+        while (j <= end) {
+            temp[k++] = arr[j++];
         }
 
+        // Copy the merged elements back into the original array
+        System.arraycopy(temp, 0, arr, start, temp.length);
     }
 
-    private static void mergeSort(int[] arr, int start, int end) {
-        if (start < end) {
-            int mid = (start + end) / 2;
-
-            // Merge Sort Call
-            mergeSort(arr, start, mid);
-            mergeSort(arr, mid + 1, end);
-            merge(arr, start, mid, end);
+    /**
+     * A utility method to print the array.
+     *
+     * @param arr The array to be printed.
+     */
+    private static void printArray(int[] arr) {
+        for (int element : arr) {
+            System.out.print(element + " ");
         }
+        System.out.println();
     }
 
+    /**
+     * Main method to test the merge function.
+     *
+     * @param args Command line arguments.
+     */
     public static void main(String[] args) {
-        int[] arr = {5, 3, 2, 4, 1};
-        int n = arr.length;
-        int start = 0, end = n - 1;
-        mergeSort(arr, start, end);
-        for (int ele : arr) {
-            System.out.print(ele + " ");
-        }
+        int[] arr = {12, 11, 13, 5, 6, 7};
+        int start = 0;
+        int mid = (arr.length - 1) / 2;
+        int end = arr.length - 1;
+
+        System.out.println("Array before merging:");
+        printArray(arr);
+
+        merge(arr, start, mid, end);
+
+        System.out.println("Array after merging:");
+        printArray(arr);
     }
 }
