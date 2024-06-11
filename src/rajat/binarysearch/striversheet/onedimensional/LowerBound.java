@@ -21,8 +21,10 @@ public class LowerBound {
         // Binary search loop to find the lower bound index
         while (start <= end) {
             int mid = start + (end - start) / 2; // Calculate mid point to avoid overflow
-
-            if (arr[mid] >= target) {
+            if(arr[mid] == target) {
+                return arr[mid];
+            }
+            if (arr[mid] > target) {
                 // If the middle element is greater than or equal to the target, update lower_bound and search left
                 lower_bound = mid;
                 end = mid - 1;

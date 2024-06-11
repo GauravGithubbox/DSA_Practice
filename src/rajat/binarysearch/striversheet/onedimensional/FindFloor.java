@@ -21,8 +21,10 @@ public class FindFloor {
         // Binary search loop to find the floor value
         while (start <= end) {
             int mid = start + (end - start) / 2; // Calculate mid point to avoid overflow
-
-            if (arr[mid] <= target) {
+            if(arr[mid] == target) {
+                return mid;
+            }
+            else if (arr[mid] < target) {
                 // If the middle element is less than or equal to the target, it's a candidate for floor
                 floor = mid;
                 start = mid + 1; // Move the start to the right to find a larger floor value
