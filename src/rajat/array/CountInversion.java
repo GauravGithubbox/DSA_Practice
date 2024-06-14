@@ -4,6 +4,7 @@ public class CountInversion {
     private static int merge(int[] arr, int start, int mid, int end) {
         int leftIndex = start; // Starting index for the left subarray
         int rightIndex = mid + 1; // Starting index for the right subarray
+
         int inversionCount = 0;
         int[] temp = new int[end - start + 1]; // Temporary array for merging
         int k = 0; // Index for the temporary array
@@ -17,6 +18,10 @@ public class CountInversion {
                 // Count inversions: all remaining elements in the left subarray
                 // are greater than the current element from the right subarray
                 inversionCount += (mid - leftIndex + 1);
+                // count = n - i // n length of arr1
+                // leftIndex = i
+                // mid + 1 is same as n
+                // [start , mid] = [1, 2, 3, 4, 5]
             }
         }
 
@@ -71,7 +76,8 @@ public class CountInversion {
     public static void main(String[] args) {
         int nums[] = {2, 4, 1, 3, 5};
         System.out.println(countInversionBruteForce(nums));
-
+        // [2, 3, 5, 6]
+        // [2, 2, 4, 4, 8]
         System.out.println(countInversion(nums));
     }
 }

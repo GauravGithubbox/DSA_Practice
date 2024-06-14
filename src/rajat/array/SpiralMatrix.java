@@ -20,6 +20,10 @@ public class SpiralMatrix {
             minRow++; // Update after traversing the right wall
 
             // Down Wall
+
+            // [1 2 3]
+            // [4 5 6]
+            // [7 8 9]
             for (int i = minRow, j = maxCol; i <= maxRow && count < totalCount; i++) {
                 output.add(matrix[i][j]);
                 count++;
