@@ -87,7 +87,7 @@ public class MinimumDaysToMakeMBouquet {
             minDay = Math.min(minDay, ele);
             maxDay = Math.max(maxDay, ele);
         }
-
+        // [a b c d e f]
         int low = minDay, high = maxDay;
         while(low <= high) {
             int mid = low + (high - low) / 2;
