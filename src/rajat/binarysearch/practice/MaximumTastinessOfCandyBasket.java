@@ -1,7 +1,7 @@
 package rajat.binarysearch.practice;
 
 import java.util.Arrays;
-
+//https://leetcode.com/problems/maximum-tastiness-of-candy-basket/description/
 public class MaximumTastinessOfCandyBasket {
 
     public static int maximumTastiness(int[] price, int k) {
