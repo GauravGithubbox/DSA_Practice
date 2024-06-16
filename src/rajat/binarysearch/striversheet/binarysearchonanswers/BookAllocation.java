@@ -75,7 +75,7 @@ public class BookAllocation {
         int low = Arrays.stream(books).max().orElseThrow(); // Minimum possible pages (largest book)
         int high = Arrays.stream(books).sum(); // Maximum possible pages (all books to one student)
 
-        int result = high; // Initialize result with the upper bound
+        int result = high; // Initialize result with the upper boun
 
         // Binary search to find the optimal allocation
         while (low <= high) {
