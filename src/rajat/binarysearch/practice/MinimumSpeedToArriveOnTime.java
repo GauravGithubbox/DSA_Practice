@@ -19,8 +19,7 @@ public class MinimumSpeedToArriveOnTime {
     }
     public static int minSpeedOnTime(int[] dist, double hour) {
         if(hour < dist.length-1) return -1;
-        int low = 0;
-        int high = 10000000;
+        int low = 0; int high = 10000000;
         int ans = -1;
         while(low <= high) {
             int mid = low + (high - low)/2;
