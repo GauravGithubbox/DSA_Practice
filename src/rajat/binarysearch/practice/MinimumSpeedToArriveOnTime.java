@@ -1,7 +1,6 @@
 package rajat.binarysearch.practice;
 
-import java.util.Arrays;
-
+// https://leetcode.com/problems/minimum-speed-to-arrive-on-time/
 public class MinimumSpeedToArriveOnTime {
     public static boolean isFeasible(int[] dist, double hour, int speed) {
         double totalTime = 0.0;
