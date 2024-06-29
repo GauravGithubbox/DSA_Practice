@@ -1,4 +1,4 @@
-package rajat.recursion.striver;
+package rajat.recursion.striver.stronghold;
 //https://leetcode.com/problems/powx-n/description/
 public class PowerCalculator {
     public double myPowHelper(double x, long n) {

@@ -1,4 +1,4 @@
-package rajat.recursion.striver;
+package rajat.recursion.striver.stronghold;
 
 import java.util.Stack;
 

@@ -1,4 +1,4 @@
-package rajat.recursion.striver;
+package rajat.recursion.striver.stronghold;
 //https://leetcode.com/problems/string-to-integer-atoi/
 public class StringToIntegerAtoi {
 
@@ -9,7 +9,7 @@ public class StringToIntegerAtoi {
         }
 
         // Use the custom trim function to remove leading and trailing spaces
-        s = customTrim(s);
+        s.trim();
         if (s.isEmpty()) {
             return 0;
         }
@@ -28,26 +28,7 @@ public class StringToIntegerAtoi {
         return myAtoiRecursive(s, index, 0, sign);
     }
 
-    // Custom recursive trim function to remove leading and trailing spaces
-    private String customTrim(String s) {
-        // Base case: empty string
-        if (s.isEmpty()) {
-            return s;
-        }
 
-        // Remove leading spaces
-        if (s.charAt(0) == ' ') {
-            return customTrim(s.substring(1));
-        }
-
-        // Remove trailing spaces
-        if (s.charAt(s.length() - 1) == ' ') {
-            return customTrim(s.substring(0, s.length() - 1));
-        }
-
-        // Return the trimmed string when no leading or trailing space
-        return s;
-    }
 
     // Helper function for recursive atoi conversion
     private int myAtoiRecursive(String s, int index, long currentNumber, int sign) {

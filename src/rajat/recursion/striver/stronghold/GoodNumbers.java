@@ -1,4 +1,4 @@
-package rajat.recursion.striver;
+package rajat.recursion.striver.stronghold;
 
 //https://leetcode.com/problems/count-good-numbers/
 public class GoodNumbers {
