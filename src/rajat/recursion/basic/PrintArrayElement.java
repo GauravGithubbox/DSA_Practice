@@ -1,7 +1,5 @@
 package rajat.recursion.basic;
 
-import java.util.ArrayList;
-
 //  1 to N Without Loop
 public class PrintArrayElement {
     // Recursive function to print array elements from start to end
