@@ -24,7 +24,7 @@ public class Palindrome {
             temp = temp.next;
             n--;
         }
-        Node<Integer> head2 = temp;
+        Node<Integer> head2 = temp.next;
         temp.next = null;
         head2 = reverseListRecursively(head2);
 
@@ -54,6 +54,7 @@ public class Palindrome {
         list.insertAtEnd(30);
         list.insertAtEnd(20);
         list.insertAtEnd(10);
+        list.insertAtEnd(130);
 
         Node<Integer> head = list.getHead();
         list.printList();
