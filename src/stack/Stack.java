@@ -1,4 +1,4 @@
-package gaurav.stack;
+package stack;
 
 import java.util.ArrayList;
 
