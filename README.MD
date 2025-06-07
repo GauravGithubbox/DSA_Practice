@@ -1,6 +1,8 @@
-# DSA Practice with Striver's A2Z DSA Course
+# 🧠 DSA Practice with NeetCode 250
 
-Welcome to our Data Structures and Algorithms (DSA) practice repository! This repository is dedicated to solving problems from the [Striver's A2Z DSA Course Sheet](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/). The goal is to enhance our problem-solving skills and deepen our understanding of DSA concepts.
+Welcome to our Data Structures and Algorithms (DSA) practice repository!  
+This repository is dedicated to solving problems from the [NeetCode 250 Practice Sheet](https://neetcode.io/practice).  
+The goal is to enhance our problem-solving skills and deepen our understanding of DSA concepts, preparing for top tech interviews.
 
 # Algorithm Problem Patterns
 
