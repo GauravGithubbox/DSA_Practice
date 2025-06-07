@@ -1,4 +1,4 @@
-package gaurav.linkedlist;
+package linkedlist;
 
 public class DoublyLinkedList {
     public static class Node {

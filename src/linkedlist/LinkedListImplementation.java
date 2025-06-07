@@ -1,4 +1,4 @@
-package gaurav.linkedlist;
+package linkedlist;
 
 public class LinkedListImplementation {
     public static class Node {
@@ -80,7 +80,7 @@ public class LinkedListImplementation {
 
     public int removeFirst() {
         if (size == 0) {
-            System.out.println("LL is Empty BC");
+            System.out.println("LL is Empty");
             return Integer.MIN_VALUE;
         }
         if (size == 1) {
@@ -97,7 +97,7 @@ public class LinkedListImplementation {
 
     public int removeLast() {
         if (size == 0) {
-            System.out.println("LL is Empty BC");
+            System.out.println("LL is Empty");
             return Integer.MIN_VALUE;
         }
         if (size == 1) {
